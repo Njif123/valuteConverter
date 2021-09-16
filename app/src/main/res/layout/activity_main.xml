@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Конвертер валют"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+         />
+
+    <Button
+        android:id="@+id/btn_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="refresh"/>
+
+    <LinearLayout
+        android:id="@+id/linlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_below="@id/textView">
+    <TextView
+        android:id="@+id/charCode"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Букв. код"
+        android:layout_below="@id/textView"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/edin"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Единиц"
+        android:layout_toRightOf="@+id/charCode"
+        android:layout_below="@id/textView"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/course"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Курс"
+        android:layout_toRightOf="@+id/edin"
+        android:layout_below="@id/textView"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/prevCourse"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Предыдущее значение"
+        android:layout_toRightOf="@+id/course"
+        android:layout_below="@id/textView"
+        android:textSize="10sp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_valuteList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linlay"
+       />
+
+
+</RelativeLayout>
