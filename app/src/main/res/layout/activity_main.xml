@@ -12,32 +12,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Конвертер валют"
-        android:textColor="@color/black"
         android:layout_marginBottom="20dp"
+        android:textSize="30sp"
         android:layout_centerHorizontal="true"
          />
-
-    <Button
-        android:id="@+id/btn_test"
+    
+    <ImageView
+        android:id="@+id/btn_refresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="refresh"/>
+        android:src="@drawable/ic_refresh"
+        android:layout_below="@+id/textView"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentEnd="true"/>
+
 
     <LinearLayout
         android:id="@+id/linlay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_below="@id/btn_refresh">
 
-        android:layout_below="@id/textView">
     <TextView
         android:id="@+id/charCode"
         android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Букв. код"
-        android:layout_below="@id/textView"
-        android:textSize="10sp"/>
+        android:layout_below="@id/btn_refresh"
+        android:textSize="15sp"/>
 
     <TextView
         android:id="@+id/edin"
@@ -46,8 +50,8 @@
         android:layout_height="wrap_content"
         android:text="Единиц"
         android:layout_toRightOf="@+id/charCode"
-        android:layout_below="@id/textView"
-        android:textSize="10sp"/>
+        android:layout_below="@id/btn_refresh"
+        android:textSize="15sp"/>
 
     <TextView
         android:id="@+id/course"
@@ -56,18 +60,21 @@
         android:layout_height="wrap_content"
         android:text="Курс"
         android:layout_toRightOf="@+id/edin"
-        android:layout_below="@id/textView"
-        android:textSize="10sp"/>
+        android:layout_below="@id/btn_refresh"
+        android:textSize="15sp"/>
 
     <TextView
         android:id="@+id/prevCourse"
         android:layout_weight="1"
         android:layout_width="wrap_content"
+        android:maxWidth="80dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Предыдущее значение"
+        android:singleLine="false"
         android:layout_toRightOf="@+id/course"
-        android:layout_below="@id/textView"
-        android:textSize="10sp"/>
+        android:layout_below="@id/btn_refresh"
+        android:textSize="15sp"/>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -75,7 +82,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/linlay"
-       />
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:ignore="SpeakableTextPresentCheck"
+        />
+
 
 
 </RelativeLayout>
