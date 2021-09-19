@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConvertActivity"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Конвертер валют"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:text="Перевод АУД в РУБ"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/valute_charCode"
+        android:text="rub"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_desc"
+        android:layout_marginLeft="25dp"
+        android:textSize="25sp"
+        android:layout_marginTop="40dp"/>
+
+    <EditText
+        android:id="@+id/et_value"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/valute_charCode"
+        android:layout_marginLeft="7dp"
+        android:inputType="numberDecimal"
+        android:hint="1"
+        android:textAlignment="viewEnd"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:srcCompat="?attr/homeAsUpIndicator"
+        android:layout_below="@id/tv_desc"
+        android:layout_marginTop="40dp"
+        android:scaleX="-1"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/valute_charCodeTo"
+        android:text="rub"
+        android:textAllCaps="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_desc"
+        android:layout_marginRight="25dp"
+        android:textSize="25sp"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:text="rub"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/valute_charCodeTo"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/btn_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_result"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Конвертировать"/>
+
+
+
+
+
+</RelativeLayout>
